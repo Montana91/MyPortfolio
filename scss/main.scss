@@ -1,15 +1,10 @@
-$primary-color: #444;
-$secondary-color: #eece1a;
-
-@mixin easeout {
-  transition: all 0.5s ease-out;
-}
-
+@import "config";
 * {
   box-sizing: border-box;
 }
 
 body {
+  @include background;
   background: $primary-color;
   color: #fff;
   height: 100%;
@@ -54,17 +49,17 @@ header {
 main {
   padding: 4rem;
   height: 100%;
-}
 
-.icons {
-  margin-top: 1rem;
+  .icons {
+    margin-top: 1rem;
 
-  a {
-    padding: 0.4rem;
+    a {
+      padding: 0.4rem;
 
-    &:hover {
-      color: $secondary-color;
-      @include easeout();
+      &:hover {
+        color: $secondary-color;
+        @include easeout();
+      }
     }
   }
   &#home {
